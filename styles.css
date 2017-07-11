@@ -15,10 +15,13 @@ font-family: 'News Cycle', sans-serif;
 body{
   background: url('images/abstractRain.png') no-repeat center center fixed;
   background-size: cover;
+  color: #85a5c0;
 }
 h1{
   font-family: 'Limelight', fantasy;
   font-size: 40px;
-  color: #85a5c0;
   text-align: center;
+}
+.fa-ellipsis-v{
+  padding: 20px;
 }
