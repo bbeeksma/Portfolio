@@ -23,12 +23,9 @@ h1{
   text-align: center;
 }
 header{
-  background-color: rgba(70, 130, 180, 0.25);
+  background-color: rgba(70, 130, 180, 0.45);
 }
 
-.siteNav{
-  float:right;
-}
 .siteNav li{
   padding: 5px;
 }
@@ -41,4 +38,17 @@ header{
 }
 .siteNav:hover li{
   display: block;
+}
+
+@media only screen and (min-width: 640px){
+  .ellipsis-v {
+    display: none;
+  }
+  .navItem,
+  .siteNav:hover li {
+    display: inline-block;
+  }
+  .siteNav:hover .ellipsis-v {
+    display: none;
+  }
 }
