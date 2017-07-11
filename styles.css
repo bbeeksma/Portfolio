@@ -17,6 +17,7 @@ body{
   background: url('images/abstractRain.png') no-repeat center center fixed;
   background-size: cover;
   color: #85a5c0;
+  font-family: 'Goudy Bookletter 1911', serif; 
 }
 h1{
   font-family: 'Limelight', fantasy;
