@@ -1,9 +1,9 @@
 /* Colors
-light Blue Gray #85a5c0
-Steel Blue #4682b4
-Dim Blue #325d81
-BlueBlack #142634
-Charcoal #242d34
+light Blue Gray #85a5c0 rgb(133, 165, 192)
+Steel Blue #4682b4 rgb(70, 130, 180)
+Dim Blue #325d81 rgb(50, 93, 129)
+BlueBlack #142634 rgb(20, 38, 52)
+Charcoal #242d34 rgb(36, 45, 52)
 
 Font Families
 font-family: 'Limelight', fantasy;
@@ -21,6 +21,9 @@ h1{
   font-family: 'Limelight', fantasy;
   font-size: 40px;
   text-align: center;
+}
+header{
+  background-color: rgba(70, 130, 180, 0.25);
 }
 .fa-ellipsis-v{
   padding: 20px;
