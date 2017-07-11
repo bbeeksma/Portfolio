@@ -25,6 +25,20 @@ h1{
 header{
   background-color: rgba(70, 130, 180, 0.25);
 }
-.fa-ellipsis-v{
-  padding: 20px;
+
+.siteNav{
+  float:right;
+}
+.siteNav li{
+  padding: 5px;
+}
+
+.navItem{
+  display: none;
+}
+.ellipsis-v{
+  display: block;
+}
+.siteNav:hover li{
+  display: block;
 }
