@@ -12,6 +12,7 @@ font-family: 'Oswald', sans-serif;
 font-family: 'News Cycle', sans-serif;
 */
 
+/*base*/
 body{
   background: url('images/abstractRain.png') no-repeat center center fixed;
   background-size: cover;
@@ -22,10 +23,22 @@ h1{
   font-size: 40px;
   text-align: center;
 }
+
+/*layout*/
 header{
   background-color: rgba(70, 130, 180, 0.45);
 }
 
+/*module*/
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.siteNav{
+  float:right;
+  text-align: right;
+}
 .siteNav li{
   padding: 5px;
 }
@@ -36,6 +49,8 @@ header{
 .ellipsis-v{
   display: block;
 }
+
+/*state*/
 .siteNav:hover li{
   display: block;
 }
