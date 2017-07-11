@@ -1,13 +1,13 @@
 'use strict';
 
-function Project(name, dateCompleted, client, description, colaborators, pageLink, repoLink, imgSrc){
-  this.name = name;
-  this.dateCompleted = dateCompleted;
-  this.client = client;
-  this.description = description;
-  this.colaborators = colaborators;
-  this.pageLink = pageLink;
-  this.repoLink = repoLink;
-  this.imgSrc = imgSrc;
+function Project(projectDataObject){
+  this.name = projectDataObject.name;
+  this.dateCompleted = projectDataObject.dateCompleted;
+  this.client = projectDataObject.client;
+  this.description = projectDataObject.description;
+  this.colaborators = projectDataObject.colaborators;
+  this.pageLink = projectDataObject.pageLink;
+  this.repoLink = projectDataObject.repoLink;
+  this.imgSrc = projectDataObject.imgSrc;
 }
 console.log(Project);
