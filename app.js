@@ -10,3 +10,4 @@ function Project(name, dateCompleted, client, description, colaborators, pageLin
   this.repoLink = repoLink;
   this.imgSrc = imgSrc;
 }
+console.log(Project);
