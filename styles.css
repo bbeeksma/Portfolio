@@ -1,0 +1,69 @@
+/* Colors
+light Blue Gray #85a5c0 rgb(133, 165, 192)
+Steel Blue #4682b4 rgb(70, 130, 180)
+Dim Blue #325d81 rgb(50, 93, 129)
+BlueBlack #142634 rgb(20, 38, 52)
+Charcoal #242d34 rgb(36, 45, 52)
+
+Font Families
+font-family: 'Limelight', fantasy;
+font-family: 'Goudy Bookletter 1911', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'News Cycle', sans-serif;
+*/
+
+/*base*/
+body{
+  background: url('images/abstractRain.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #85a5c0;
+}
+h1{
+  font-family: 'Limelight', fantasy;
+  font-size: 40px;
+  text-align: center;
+}
+
+/*layout*/
+header{
+  background-color: rgba(70, 130, 180, 0.45);
+}
+
+/*module*/
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.siteNav{
+  float:right;
+  text-align: right;
+}
+.siteNav li{
+  padding: 5px;
+}
+
+.navItem{
+  display: none;
+}
+.ellipsis-v{
+  display: block;
+}
+
+/*state*/
+.siteNav:hover li{
+  display: block;
+}
+
+@media only screen and (min-width: 640px){
+  .ellipsis-v {
+    display: none;
+  }
+  .navItem,
+  .siteNav:hover li {
+    display: inline-block;
+  }
+  .siteNav:hover .ellipsis-v {
+    display: none;
+  }
+}
