@@ -16,3 +16,9 @@ body{
   background: url('images/abstractRain.png') no-repeat center center fixed;
   background-size: cover;
 }
+h1{
+  font-family: 'Limelight', fantasy;
+  font-size: 40px;
+  color: #85a5c0;
+  text-align: center;
+}
