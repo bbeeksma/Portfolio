@@ -11,3 +11,11 @@ function Project(projectDataObject){
   this.imgSrc = projectDataObject.imgSrc;
 }
 console.log(Project);
+
+Project.prototype.toHtml = function(){
+  //clone the template and fill er in
+}
+
+projectData.forEach(function(item){
+  //run the toHtml function with each of the objects from the data
+});
