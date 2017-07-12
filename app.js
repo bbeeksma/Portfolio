@@ -18,8 +18,8 @@ Project.prototype.toHtml = function(){
   $newProjectArticle.find('.projectTextBox p').text(this.description);
   $newProjectArticle.find('.completedDate').text(this.dateCompleted);
   $newProjectArticle.find('.collaborators').text(this.colaborators);
-  $newProjectArticle.find('.projectLinks:first-child').text(this.name + ' home Page').attr('href',this.pageLink);
-  $newProjectArticle.find('.projectLinks:last-child').text(this.name + ' repository').attr('href',this.repoLink);
+  $newProjectArticle.find('.pageLink a').attr('href',this.pageLink).text(this.name + ' home page');
+  $newProjectArticle.find('.repoLink a').attr('href',this.repoLink).text(this.name + ' repository');
   $newProjectArticle.find('.projectPicture').attr('src',this.imgSrc);
   $('#projectContainer').append($newProjectArticle);
 }
