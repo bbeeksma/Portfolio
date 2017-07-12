@@ -21,6 +21,7 @@ Project.prototype.toHtml = function(){
   $newProjectArticle.find('.projectLinks:first-child').text(this.name + ' home Page').attr('href',this.pageLink);
   $newProjectArticle.find('.projectLinks:last-child').text(this.name + ' repository').attr('href',this.repoLink);
   $newProjectArticle.find('.projectPicture').attr('src',this.imgSrc);
+  $('#projectContainer').append($newProjectArticle);
 }
 
 projectData.forEach(function(item){
