@@ -50,7 +50,6 @@ header{
 .siteNav li{
   padding: 5px;
 }
-
 .navItem{
   display: none;
 }
@@ -69,7 +68,9 @@ header{
 .projectTextBox{
   width: 100%;
 }
-
+.tabBox{
+  display:none;
+}
 /*state*/
 .siteNav:hover li{
   display: block;
