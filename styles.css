@@ -40,6 +40,9 @@ header{
   display: table;
   clear: both;
 }
+.template{
+  display: none;
+}
 .siteNav{
   float:right;
   text-align: right;
