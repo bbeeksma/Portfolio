@@ -8,7 +8,7 @@ var projectData = [
     ,description: 'You bet I\'m agitated! I may be surrounded by insanity, but I am not insane. About four years. I got tired of hearing how young I looked.'
     ,colaborators: 'Dr. Doom'
     ,pageLink: 'http://www.fallingfalling.com/'
-    ,repoLink: 'http://www.fallingfalling.com/'
+    ,repoLink: 'http://zoomquilt.org/'
     ,imgSrc: 'images/flower-of-passion-fruit-2495077_640.jpg'
   }
   ,{
@@ -18,7 +18,7 @@ var projectData = [
     ,description: 'Captain, why are we out here chasing comets? You enjoyed that. A lot of things can change in twelve years, Admiral.'
     ,colaborators: 'Tony Stark'
     ,pageLink: 'http://www.fallingfalling.com/'
-    ,repoLink: 'http://www.fallingfalling.com/'
+    ,repoLink: 'http://zoomquilt.org/'
     ,imgSrc: 'images/model-car-2489193_640.jpg'
   }
   ,{
@@ -28,7 +28,7 @@ var projectData = [
     ,description: 'Captain, why are we out here chasing comets? In all trust, there is the possibility for betrayal. I can\'t. As much as I care about you, my first duty is to the ship.'
     ,colaborators: 'Red Skull'
     ,pageLink: 'http://www.fallingfalling.com/'
-    ,repoLink: 'http://www.fallingfalling.com/'
+    ,repoLink: 'http://zoomquilt.org/'
     ,imgSrc: 'images/water-lily-2495064_640.jpg'
   }
 ]
