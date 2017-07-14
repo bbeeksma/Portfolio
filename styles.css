@@ -46,9 +46,6 @@ header{
   display: table;
   clear: both;
 }
-.template{
-  display: none;
-}
 .projectLinks, .siteNav{
   font-family: 'News Cycle', sans-serif;
 }
