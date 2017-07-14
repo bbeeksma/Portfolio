@@ -29,6 +29,11 @@ function siteNavTabs() {
   $('.siteNav .tabItem a:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 }
 
+function accordionButton(){
+  //expand/contractstuff goes here
+}
+
 $(document).ready(function(){
   siteNavTabs();
+  accordionButton();
 })
