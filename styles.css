@@ -6,10 +6,11 @@ BlueBlack #142634 rgb(20, 38, 52)
 Charcoal #242d34 rgb(36, 45, 52)
 
 Font Families
-font-family: 'Limelight', fantasy;
-font-family: 'Goudy Bookletter 1911', serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'News Cycle', sans-serif;
+font-family: 'Limelight', fantasy; -- use for BIG HEADERS
+font-family: 'Goudy Bookletter 1911', serif; --use for body copy
+font-family: 'News Cycle', sans-serif; --use for smaller headers
+font-family: 'Oswald', sans-serif; -- use for data if needed
+
 */
 
 /*base*/
@@ -19,8 +20,10 @@ body{
   color: #85a5c0;
   font-family: 'Goudy Bookletter 1911', serif;
 }
-h1{
+h1, h2{
   font-family: 'Limelight', fantasy;
+}
+h1{
   font-size: 40px;
   text-align: center;
 }
@@ -28,6 +31,9 @@ img{
   height: 100%;
   width: 100%;
   object-fit: contain
+}
+h3,h4,h5{
+  font-family: 'News Cycle', sans-serif;
 }
 /*layout*/
 header{
@@ -42,6 +48,9 @@ header{
 }
 .template{
   display: none;
+}
+.projectLinks, .siteNav{
+  font-family: 'News Cycle', sans-serif;
 }
 .siteNav{
   float:right;
