@@ -30,6 +30,9 @@ function siteNavTabs() {
 }
 
 function accordionButton(){
+  $('.tabBox').on('click','.nameButton',function(){
+    $(this).siblings('.expandedProject').toggleClass('isExpanded');
+  })
   //expand/contractstuff goes here
 }
 
