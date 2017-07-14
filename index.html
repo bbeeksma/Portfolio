@@ -9,20 +9,22 @@
     <script src="https://use.fontawesome.com/aef57db9f9.js"></script>
     <script id="article-template" type="text/x-handlebars-template">
       <article class="project clearfix">
-        <div class="byline">
+        <button class="nameButton">
           <h2>{{name}}</h2>
-        </div>
-        <div class="projectPictureBox">
-          <img class="projectPicture" src="{{imgSrc}}"></img>
-        </div>
-        <div class='projectTextBox'>
-          <p>{{description}}</p>
-          <h4 class="completedDate">{{dateCompleted}}</h4>
-          <h5 class="collaborators">{{colaborators}}</h5>
-          <ul class="projectLinks">
-            <li class="pageLink"><a href="#">{{pageLink}}</a></li>
-            <li class="repoLink"><a href="#">{{repoLink}}</a></li>
-          </ul>
+        </button>
+        <div class="expandedProject">
+          <div class="projectPictureBox">
+            <img class="projectPicture" src="{{imgSrc}}"></img>
+          </div>
+          <div class='projectTextBox'>
+            <p>{{description}}</p>
+            <h4 class="completedDate">{{dateCompleted}}</h4>
+            <h5 class="collaborators">{{colaborators}}</h5>
+            <ul class="projectLinks">
+              <li class="pageLink"><a href="#">{{pageLink}}</a></li>
+              <li class="repoLink"><a href="#">{{repoLink}}</a></li>
+            </ul>
+          </div>
         </div>
       </article>
     </script>
