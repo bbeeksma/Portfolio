@@ -13,16 +13,35 @@
       <nav class="nav">
         <ul class ="siteNav">
           <li class ="ellipsis-v"><span class="fa fa-ellipsis-v" aria-hidden="true"></span></li>
-          <li class ="navItem"><a href="#"> Home</a></li>
+          <li class ="navItem tabItem"><a href="#" data-tab="home"> Home</a></li>
           <li class ="navItem"><a href="#"> About</a></li>
-          <li class ="navItem"><a href="projects.html"> Portfolio</a></li>
+          <li class ="navItem tabItem"><a href="#" data-tab="portfolio"> Portfolio</a></li>
           <li class ="navItem"><a href="#"> Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="centerBox">
+    <section id="home" class="tabBox">
       <h1>Benjamin Beeksma</h1>
-    </div>
+    </section>
+    <section id="portfolio" class="tabBox">
+      <article class="project template clearfix">
+        <div class="byline">
+          <h2>Project Name</h2>
+        </div>
+        <div class="projectPictureBox">
+          <img class="projectPicture" src="images/forest.jpg"></img>
+        </div>
+        <div class='projectTextBox'>
+          <p>We could cause a diplomatic crisis. Take the ship into the Neutral Zone What? We're not at all alike! Your shields were failing, sir. For an android with no feelings, he sure managed to evoke them in others. Commander William Riker of the Starship Enterprise. Maybe we better talk out here; the observation lounge has turned into a swamp. Computer, belay that order. We finished our first sensor sweep of the neutral zone. Earl Grey tea, watercress sandwiches... and Bularian canapés? Are you up for promotion? The unexpected is our normal routine. This is not about revenge. This is about justice.</p>
+          <h4 class="completedDate">Date Completed</h4>
+          <h5 class="collaborators">collaborators</h5>
+          <ul class="projectLinks">
+            <li class="pageLink"><a href="#">PageLink</a></li>
+            <li class="repoLink"><a href="#">RepoLink</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="data.js"></script>
     <script src="app.js"></script>
