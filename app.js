@@ -12,16 +12,10 @@ function Project(projectDataObject){
 }
 
 Project.prototype.toHtml = function(){
-  var $newProjectArticle = $('article.template').clone();
-  $newProjectArticle.toggleClass('template');
-  $newProjectArticle.find('.byline h2').text(this.name);
-  $newProjectArticle.find('.projectTextBox p').text(this.description);
-  $newProjectArticle.find('.completedDate').text(this.dateCompleted);
-  $newProjectArticle.find('.collaborators').text(this.colaborators);
-  $newProjectArticle.find('.pageLink a').attr('href',this.pageLink).text(this.name + ' home page');
-  $newProjectArticle.find('.repoLink a').attr('href',this.repoLink).text(this.name + ' repository');
-  $newProjectArticle.find('.projectPicture').attr('src',this.imgSrc);
-  $('#portfolio').append($newProjectArticle);
+  var theTemplateScript = $('#article-template').html();
+  var theTemplate = Handlebars.compile(theTemplateScript);
+  var theCompiledHtml = theTemplate(this);
+  $('#portfolio').append(theCompiledHtml);
 }
 
 projectData.forEach(function(item){
