@@ -1,14 +1,9 @@
 'use strict';
 
 function Project(projectDataObject){
-  this.name = projectDataObject.name;
-  this.dateCompleted = projectDataObject.dateCompleted;
-  this.client = projectDataObject.client;
-  this.description = projectDataObject.description;
-  this.colaborators = projectDataObject.colaborators;
-  this.pageLink = projectDataObject.pageLink;
-  this.repoLink = projectDataObject.repoLink;
-  this.imgSrc = projectDataObject.imgSrc;
+  for(var key in projectDataObject){
+    this[key] = projectDataObject[key];
+  }
 }
 
 Project.prototype.toHtml = function(){
