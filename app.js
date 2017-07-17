@@ -50,14 +50,13 @@ function siteNavTabs() {
     $(makeIdForSelection).fadeIn();
   });
 
-  $('.siteNav .tabItem a:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+  $('.siteNav .tabItem a:first').click();
 }
 
 function accordionButton(){
   $('.tabBox').on('click','.nameButton',function(){
     $(this).siblings('.expandedProject').toggleClass('isExpanded');
   })
-  //expand/contractstuff goes here
 }
 
 $(document).ready(function(){
