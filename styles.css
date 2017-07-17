@@ -52,6 +52,11 @@ header{
 .projectLinks, .siteNav{
   font-family: 'News Cycle', sans-serif;
 }
+.nameButton{
+  width: 100%;
+  color :#85a5c0;
+  background-color: rgba(70, 130, 180, 0.60);
+}
 .siteNav{
   float:right;
   text-align: right;
@@ -73,6 +78,7 @@ header{
   float: left;
   clear:both;
   max-width: 100%;
+  padding: 15px;
 }
 .projectTextBox{
   width: 100%;
@@ -86,7 +92,14 @@ header{
   transition-property: all;
   transition-duration: .5s;
   transition-timing-function: ease;
+  color: rgba(20, 38, 52, 1);
+  background-color: rgba(133, 165, 192, 0.6);
 }
+.expandedProject p{
+  font-size: 20px;
+  padding: 15px;
+}
+
 /*state*/
 .siteNav:hover li{
   display: block;
