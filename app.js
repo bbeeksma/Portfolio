@@ -14,9 +14,13 @@ Project.prototype.toHtml = function(){
 }
 
 function buildProjects(){
-  projectData.forEach(function(item){
-    var newProject = new Project(item);
-    newProject.toHtml();
+  $.getJSON('data/projects.json',function(data,message,xhr){
+    window.eTag = xhr.getResponseHeader('ETag');
+    window.localStorage.projectData = JSON.stringify(data);
+    data.forEach(function(item){
+      var newProject = new Project(item);
+      newProject.toHtml();
+    });
   });
 }
 
