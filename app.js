@@ -13,10 +13,12 @@ Project.prototype.toHtml = function(){
   $('#portfolio').append(theCompiledHtml);
 }
 
-projectData.forEach(function(item){
-  var newProject = new Project(item);
-  newProject.toHtml();
-});
+function buildProjects(){
+  projectData.forEach(function(item){
+    var newProject = new Project(item);
+    newProject.toHtml();
+  });
+}
 
 function siteNavTabs() {
   $('.siteNav .tabItem a').on('click', function() {
@@ -39,4 +41,5 @@ function accordionButton(){
 $(document).ready(function(){
   siteNavTabs();
   accordionButton();
+  buildProjects();
 })
