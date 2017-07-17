@@ -43,6 +43,10 @@ header{
   background-color: rgba(70, 130, 180, 0.60);
 }
 
+.aligner {
+  display: flex;
+  height: 80vh;
+}
 /*module*/
 .clearfix:after{
   content: "";
@@ -85,6 +89,7 @@ header{
 }
 .tabBox{
   display:none;
+  margin: auto auto;
 }
 .expandedProject{
   max-height: 0;
