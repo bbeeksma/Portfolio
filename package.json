@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bbeeksma/Portfolio/issues"
   },
-  "homepage": "https://github.com/bbeeksma/Portfolio#readme"
+  "homepage": "https://github.com/bbeeksma/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
