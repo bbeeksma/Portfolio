@@ -46,6 +46,7 @@ header{
 .aligner {
   display: flex;
   height: 80vh;
+  flex-shrink: 1;
 }
 /*module*/
 .clearfix:after{
@@ -89,7 +90,8 @@ header{
 }
 .tabBox{
   display:none;
-  margin: auto auto;
+  margin: auto 0;
+  width: 100%;
 }
 .expandedProject{
   max-height: 0;
