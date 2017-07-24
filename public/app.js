@@ -7,21 +7,21 @@ function Project(projectDataObject){
   Object.keys(projectDataObject).forEach(key => this[key] = projectDataObject[key]);
 }
 
-Project.prototype.toHtml = function(){
+Project.prototype.toHtml = () => {
   var theTemplateScript = $('#article-template').html();
   var theTemplate = Handlebars.compile(theTemplateScript);
   var theCompiledHtml = theTemplate(this);
   $('#portfolio').append(theCompiledHtml);
 }
 
-function buildProjects(data){
+Project.buildProjects = (data) => {
   data.forEach(function(item){
     var newProject = new Project(item);
     newProject.toHtml();
   });
 }
 
-function initProjects(){
+Project.initProjects = () => {
   var eTag;
   $.ajax({
     type: 'HEAD',
@@ -32,18 +32,18 @@ function initProjects(){
   });
   if (localStorage.projectData && localStorage.eTag === eTag) {
     let data = JSON.parse(localStorage.projectData)
-    buildProjects(data);
+    Project.buildProjects(data);
   }
   else{
     $.getJSON('data/projects.json',function(data,message,xhr){
       window.localStorage.eTag = xhr.getResponseHeader('ETag');
       window.localStorage.projectData = JSON.stringify(data);
-      buildProjects(data);
+      Project.buildProjects(data);
     });
   }
 }
 
-function siteNavTabs() {
+page.siteNavTabs = () => {
   $('.siteNav .tabItem a').on('click', function() {
     $('.tabBox').hide();
     var activeTab = $(this).data('tab');
@@ -54,14 +54,14 @@ function siteNavTabs() {
   $('.siteNav .tabItem a:first').click();
 }
 
-function accordionButton(){
+page.accordionButton = () => {
   $('.tabBox').on('click','.nameButton',function(){
     $(this).siblings('.expandedProject').toggleClass('isExpanded');
   })
 }
 
-$(document).ready(function(){
-  siteNavTabs();
-  accordionButton();
-  initProjects();
-})
+page.initPage = () => {
+  page.siteNavTabs();
+  page.accordionButton();
+  page.initProjects();
+}
