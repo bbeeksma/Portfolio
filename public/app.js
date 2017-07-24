@@ -15,12 +15,14 @@ var app = app || {};
     $('#portfolio').append(theCompiledHtml);
   }
 
+  Project.all = []
+
   Project.buildProjects = (data) => {
-    data.map((item) => {
-      var newProject = new Project(item);
-      newProject.toHtml();
-    });
-  }
+    Project.all = data.map((item) => new Project(item));
+    console.log(Project.all);
+    Project.all.forEach(project => project.toHtml());
+  };
+
 
   Project.initProjects = () => {
     var eTag;
