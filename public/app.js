@@ -8,7 +8,7 @@ var app = app || {};
     Object.keys(projectDataObject).forEach(key => this[key] = projectDataObject[key]);
   }
 
-  Project.prototype.toHtml = () => {
+  Project.prototype.toHtml = function() {
     var theTemplateScript = $('#article-template').html();
     var theTemplate = Handlebars.compile(theTemplateScript);
     var theCompiledHtml = theTemplate(this);
@@ -16,7 +16,7 @@ var app = app || {};
   }
 
   Project.buildProjects = (data) => {
-    data.forEach(function(item){
+    data.map((item) => {
       var newProject = new Project(item);
       newProject.toHtml();
     });
@@ -33,13 +33,13 @@ var app = app || {};
     });
     if (localStorage.projectData && localStorage.eTag === eTag) {
       let data = JSON.parse(localStorage.projectData)
-      Project.buildProjects(data);
+      app.Project.buildProjects(data);
     }
     else{
       $.getJSON('data/projects.json',function(data,message,xhr){
         window.localStorage.eTag = xhr.getResponseHeader('ETag');
         window.localStorage.projectData = JSON.stringify(data);
-        Project.buildProjects(data);
+        app.Project.buildProjects(data);
       });
     }
   }
@@ -62,9 +62,9 @@ var app = app || {};
   }
 
   page.initPage = () => {
-    page.siteNavTabs();
-    page.accordionButton();
-    page.initProjects();
+    app.page.siteNavTabs();
+    app.page.accordionButton();
+    app.Project.initProjects();
   }
   module.Project = Project;
   module.page = page;
