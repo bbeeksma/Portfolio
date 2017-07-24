@@ -1,9 +1,7 @@
 'use strict';
 
 function Project(projectDataObject){
-  for(var key in projectDataObject){
-    this[key] = projectDataObject[key];
-  }
+  Object.keys(projectDataObject).forEach(key => this[key] = projectDataObject[key]);
 }
 
 Project.prototype.toHtml = function(){
