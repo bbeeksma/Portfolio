@@ -1,5 +1,8 @@
 'use strict';
 
+
+var page = {};
+
 function Project(projectDataObject){
   Object.keys(projectDataObject).forEach(key => this[key] = projectDataObject[key]);
 }
