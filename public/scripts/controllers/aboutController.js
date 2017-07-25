@@ -6,7 +6,7 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.showAbout = () => {
-    $('.tab-content').hide();
+    $('.tabBox').hide();
     $('#about').fadeIn();
   }
 

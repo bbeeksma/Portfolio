@@ -4,8 +4,8 @@ var app = app || {};
 (function(module) {
   const portfolioController = {};
 
-  portfolioController.showAbout = () => {
-    $('.tab-content').hide();
+  portfolioController.showPortfolio = () => {
+    $('.tabBox').hide();
     $('#portfolio').fadeIn();
   }
 

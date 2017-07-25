@@ -4,7 +4,9 @@ var app = app || {};
 (function(module){
   var page = {};
 
+
   page.siteNavTabs = () => {
+    /*
     $('.siteNav .tabItem a').on('click', function() {
       $('.tabBox').hide();
       var activeTab = $(this).data('tab');
@@ -13,6 +15,7 @@ var app = app || {};
     });
 
     $('.siteNav .tabItem a:first').click();
+    */
   }
 
   page.accordionButton = () => {

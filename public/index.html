@@ -34,9 +34,9 @@
       <nav class="nav">
         <ul class ="siteNav">
           <li class ="ellipsis-v"><span class="fa fa-ellipsis-v" aria-hidden="true"></span></li>
-          <li class ="navItem tabItem"><a href="#" data-tab="home"> Home</a></li>
-          <li class ="navItem"><a href="#"> About</a></li>
-          <li class ="navItem tabItem"><a href="#" data-tab="portfolio"> Portfolio</a></li>
+          <li class ="navItem tabItem"><a href="/" data-tab="home"> Home</a></li>
+          <li class ="navItem"><a href="/about"> About</a></li>
+          <li class ="navItem tabItem"><a href="/portfolio" data-tab="portfolio"> Portfolio</a></li>
           <li class ="navItem"><a href="#"> Contact</a></li>
         </ul>
       </nav>
@@ -57,8 +57,9 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/views/pageView.js"></script>
-    <script>
-      app.page.initPage();
-    </script>
+    <script src="scripts/controllers/portfolioController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>
