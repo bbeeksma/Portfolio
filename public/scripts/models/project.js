@@ -1,9 +1,8 @@
 'use strict';
+
 var app = app || {};
 
 (function(module){
-  var page = {};
-
   function Project(projectDataObject){
     Object.keys(projectDataObject).forEach(key => this[key] = projectDataObject[key]);
   }
@@ -15,12 +14,14 @@ var app = app || {};
     $('#portfolio').append(theCompiledHtml);
   }
 
+  Project.all = []
+
   Project.buildProjects = (data) => {
-    data.map((item) => {
-      var newProject = new Project(item);
-      newProject.toHtml();
-    });
-  }
+    Project.all = data.map((item) => new Project(item));
+    console.log(Project.all);
+    Project.all.forEach(project => project.toHtml());
+  };
+
 
   Project.initProjects = () => {
     var eTag;
@@ -44,28 +45,5 @@ var app = app || {};
     }
   }
 
-  page.siteNavTabs = () => {
-    $('.siteNav .tabItem a').on('click', function() {
-      $('.tabBox').hide();
-      var activeTab = $(this).data('tab');
-      var makeIdForSelection = '#' + activeTab;
-      $(makeIdForSelection).fadeIn();
-    });
-
-    $('.siteNav .tabItem a:first').click();
-  }
-
-  page.accordionButton = () => {
-    $('.tabBox').on('click','.nameButton',function(){
-      $(this).siblings('.expandedProject').toggleClass('isExpanded');
-    })
-  }
-
-  page.initPage = () => {
-    app.page.siteNavTabs();
-    app.page.accordionButton();
-    app.Project.initProjects();
-  }
   module.Project = Project;
-  module.page = page;
 }(app));

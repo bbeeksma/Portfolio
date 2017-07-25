@@ -34,10 +34,10 @@
       <nav class="nav">
         <ul class ="siteNav">
           <li class ="ellipsis-v"><span class="fa fa-ellipsis-v" aria-hidden="true"></span></li>
-          <li class ="navItem tabItem"><a href="#" data-tab="home"> Home</a></li>
-          <li class ="navItem"><a href="#"> About</a></li>
-          <li class ="navItem tabItem"><a href="#" data-tab="portfolio"> Portfolio</a></li>
-          <li class ="navItem"><a href="#"> Contact</a></li>
+          <li class ="navItem tabItem"><a href="/" data-tab="home"> Home</a></li>
+          <li class ="navItem"><a href="/about"> About</a></li>
+          <li class ="navItem tabItem"><a href="/portfolio" data-tab="portfolio"> Portfolio</a></li>
+          <li class ="navItem"><a href="/contact"> Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -46,13 +46,25 @@
         <h1>Benjamin Beeksma</h1>
       </section>
       <section id="portfolio" class="tabBox">
+        <h1>Projects</h1>
+      </section>
+      <section id="about" class="tabBox">
+        <h1>About the Author</h1>
+      </section>
+      <section id="contact" class="tabBox">
+        <h1>Contact Me</h1>
       </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-      app.page.initPage();
-    </script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/views/pageView.js"></script>
+    <script src="scripts/controllers/portfolioController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    <script>app.page.initPage();</script>
   </body>
 </html>
