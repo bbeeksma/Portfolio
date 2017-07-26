@@ -32,9 +32,9 @@ var app = app || {};
   // render the data
       data => {
         data.forEach(repo => Project.all.push(new Project(repo)));
+        app.Project.buildProjects(data);
       }
     );
-
     /*
     var eTag;
     $.ajax({
@@ -52,7 +52,6 @@ var app = app || {};
       $.getJSON('data/projects.json',function(data,message,xhr){
         window.localStorage.eTag = xhr.getResponseHeader('ETag');
         window.localStorage.projectData = JSON.stringify(data);
-        app.Project.buildProjects(data);
       });
     } */
   }
