@@ -14,15 +14,15 @@
         </button>
         <div class="expandedProject">
           <div class="projectPictureBox">
-            <img class="projectPicture" src="{{imgSrc}}"></img>
+            <!--<img class="projectPicture" src="{{imgSrc}}"></img>-->
           </div>
           <div class='projectTextBox'>
             <p>{{description}}</p>
-            <h4 class="completedDate">{{dateCompleted}}</h4>
-            <h5 class="collaborators">{{colaborators}}</h5>
+            <h4 class="completedDate">{{updated_at}}</h4>
+            <a href="{{collaborators_url}}"<h5 class="collaborators">Collaborators</h5></a>
             <ul class="projectLinks">
-              <li class="pageLink"><a href="#">{{pageLink}}</a></li>
-              <li class="repoLink"><a href="#">{{repoLink}}</a></li>
+              <li class="pageLink"><a href="{{homepage}}">Homepage</a></li>
+              <li class="repoLink"><a href="{{html_url}}">GitHub Repository</a></li>
             </ul>
           </div>
         </div>
