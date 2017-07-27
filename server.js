@@ -7,7 +7,7 @@ const exp = express();
 
 exp.use(express.static('./public'));
 
-const githubToken = process.env.GITHUB_TOKEN || '';
+const githubToken = process.env.GITHUB_TOKEN;
 
 function proxyGitHub(request, response){
   console.log(`Routing GitHub request for ${request.params[0]}`);
