@@ -2,7 +2,7 @@
 
 const express = require('express');
 const requestProxy = require('express-request-proxy');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const exp = express();
 
 exp.use(express.static('./public'));
